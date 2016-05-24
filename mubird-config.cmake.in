@@ -1,0 +1,9 @@
+include_directories(${PROJECT_SOURCE_DIR}/mubird)
+
+include_directories(${THIRD_PARTY_BINARY_DIR}/include)
+
+include("${PROJECT_BINARY_DIR}/${PROJECT_NAME}-export.cmake")
+
+add_library(gflags STATIC IMPORTED)
+set_target_properties(gflags PROPERTIES IMPORTED_LOCATION "${THIRD_PARTY_BINARY_DIR}/lib/libgflags.a")
+

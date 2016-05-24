@@ -1,0 +1,12 @@
+include(ExternalProject)
+
+set(THIRD_PARTY_TARBALL_DIR "${THIRD_PARTY_SOURCE_DIR}/tarballs")
+set(THIRD_PARTY_PATCH_DIR "${THIRD_PARTY_SOURCE_DIR}/patches")
+
+ExternalProject_Add(
+    gflag
+    URL ${THIRD_PARTY_TARBALL_DIR}/gflags-2.1.2.tar.gz
+    CONFIGURE_COMMAND cmake -DCMAKE_INSTALL_PREFIX=${THIRD_PARTY_BINARY_DIR} .
+    BUILD_IN_SOURCE 1
+)
+
