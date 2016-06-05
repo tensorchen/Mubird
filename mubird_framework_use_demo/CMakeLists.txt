@@ -9,4 +9,4 @@ find_package(mubird REQUIRED)
 aux_source_directory(. SRCS)
 
 add_executable(demo ${SRCS})
-target_link_libraries(demo mubird)
+target_link_libraries(demo mubird -pthread)
